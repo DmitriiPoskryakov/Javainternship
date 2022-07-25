@@ -7,10 +7,12 @@ public class MainTest {
         File toIo = new File("CopyIo/test.txt");
         File toNio = new File("CopyNio/test.txt");
         File toFiles = new File("CopyFiles/test.txt");
-        CopyIo test = new CopyIo(from, toIo);
+        CopyIo testIo = new CopyIo(from, toIo);
+        CopyNio testNio = new CopyNio(from, toNio);
 
         try {
-            test.copy();
+            testIo.copy();
+            testNio.copy();
             System.out.println("File copied successfully.");
         } catch (IOException ex) {
             ex.printStackTrace();
