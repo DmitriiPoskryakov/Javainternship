@@ -9,10 +9,12 @@ public class MainTest {
         File toFiles = new File("CopyFiles/test.txt");
         CopyIo testIo = new CopyIo(from, toIo);
         CopyNio testNio = new CopyNio(from, toNio);
+        CopyFiles testFiles = new CopyFiles(from, toFiles);
 
         try {
             testIo.copy();
             testNio.copy();
+            testFiles.copy();
             System.out.println("File copied successfully.");
         } catch (IOException ex) {
             ex.printStackTrace();
