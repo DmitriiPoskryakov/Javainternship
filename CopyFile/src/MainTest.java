@@ -22,9 +22,9 @@ public class MainTest {
         System.out.println("Введите путь к директории в которую нужно скопировать файл");
         Scanner sc = new Scanner(System.in);
         String destDirectory = sc.nextLine();
-        String[] n = srcPath.split("/");
-        String nameFile = n[n.length - 1];
-        String destPath = destDirectory + "/" + nameFile;
+        String[] n = srcPath.split("\\W");
+        String nameFile = n[n.length - 2] + "." + n[n.length - 1];
+        String destPath = destDirectory + "\\" + nameFile;
         boolean destIsDirectory = Files.isDirectory(Path.of(destDirectory));
         boolean destExists = Files.exists(Path.of(destPath));
         if (!destIsDirectory) {
