@@ -82,6 +82,8 @@ public class MainTest {
         //copyWithIo();
         //copyWithNio();
         copyWithFiles();
-
+        String str = "go";
+        String str1 = "home";
+        String str2 = str + str1;
     }
 }
